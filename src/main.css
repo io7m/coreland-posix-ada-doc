@@ -106,7 +106,9 @@ table.exception_table td {
 }
 .exception_table_header { font-weight: bold; }
 
-.example {
+.example,
+.z_specification
+{
   border: 1px solid #ddd;
   padding: 1em;
 }

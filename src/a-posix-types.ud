@@ -1,0 +1,9 @@
+(section
+  (ref "posix_types")
+  (title "Base definitions")
+
+  (para "The definitions given here are intended to match the basic
+    Ada types. They are essentially just included to allow the formal
+    Z specification to pass type checks.")
+
+  (para (render-noescape "a-posix-types")))

@@ -1,0 +1,2 @@
+(section
+  (ref "posix_user_db_get_entry_by_name"))

@@ -1,0 +1,10 @@
+(section
+  (ref "posix_file_status")
+  (title "POSIX.File_Status API Reference")
+
+  (contents)
+
+  (include "a-posix-file_status-get_status.ud")
+  (include "a-posix-file_status-get_descriptor_status.ud")
+
+) ; end of section

@@ -1,0 +1,5 @@
+\begin{zed}
+Character == 0 \upto 255
+\also
+String == \seq Character
+\end{zed}

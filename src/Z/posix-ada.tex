@@ -1,7 +1,13 @@
 \documentstyle[fuzz]{article}
+\pagestyle{empty}
 \begin{document}
-
-\input{posix-file-types-fd.tex}
-\input{posix-file-types-valid_fd.tex}
-
+\begin{zed}
+File\_Descriptors == \{ F : \num | F \geq -1 \}
+\end{zed}
+\begin{zed}
+Valid\_Descriptors == \{ V : File\_Descriptors | V \geq 0 \}
+\end{zed}
+\begin{zed}
+File\_Name == \{ F : String | \# F \leq Max\_Path\_Length \}
+\end{zed}
 \end{document}

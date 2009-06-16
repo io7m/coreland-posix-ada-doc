@@ -1,7 +1,7 @@
 (section
-  (ref "posix_file_open_read_only")
-  (title "POSIX.File.Open_Read_Only")
-  (para procedure_desc "Open file read-only.")
+  (ref "posix_file_open_append")
+  (title "POSIX.File.Open_Append")
+  (para procedure_desc "Open file in append mode.")
   (subsection
     (title "Synopsis")
     (para-verbatim procedure_synopsis
@@ -9,7 +9,7 @@
 with POSIX.Error;
 with POSIX.File;
 
-procedure Open_Read_Only
+procedure Open_Append
   (File_Name    : in String;
    Non_Blocking : in Boolean;
    Descriptor   : out Descriptor_t;
@@ -23,8 +23,8 @@ procedure Open_Read_Only
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Open_Read_Only") " procedure opens
-      the file " (item parameter "File_Name") " for reading, returning
+      "The " (item ada_procedure "Open_Append") " procedure opens
+      the file " (item parameter "File_Name") " for appending, returning
       a file descriptor in " (item parameter "Descriptor") ".")
     (para
       "If " (item parameter "Non_Blocking") " is specified, the file
@@ -42,6 +42,6 @@ procedure Open_Read_Only
   (subsection
     (title "Implementation")
     (para
-      "The " (item ada_procedure "Open_Read_Only") " procedure is a
+      "The " (item ada_procedure "Open_Append") " procedure is a
       specialization of the more general " (link "posix_file_open" "Open")
       " procedure.")))

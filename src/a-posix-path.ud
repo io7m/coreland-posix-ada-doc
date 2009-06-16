@@ -1,19 +1,13 @@
 (section
-  (ref "posix_file")
-  (title "POSIX.File API Reference")
+  (ref "posix_path")
+  (title "POSIX.Path API Reference")
 
   (contents)
 
   (include "a-posix-file-types.ud")
 
-  (include "a-posix-file-open_read_only.ud")
-  (include "a-posix-file-open_write_only.ud")
-  (include "a-posix-file-open_read_write.ud")
-  (include "a-posix-file-open_append.ud")
-  (include "a-posix-file-open_create.ud")
-  (include "a-posix-file-open_exclusive.ud")
-  (include "a-posix-file-open_truncate.ud")
   (include "a-posix-file-open.ud")
+  (include "a-posix-file-open_read_only.ud")
   (include "a-posix-file-change_mode.ud")
   (include "a-posix-file-change_descriptor_mode.ud")
   (include "a-posix-file-change_ownership.ud")

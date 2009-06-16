@@ -3,25 +3,38 @@
 
   (subsection
     (title "Descriptor_t")
-    (para-verbatim type_synopsis
+    (para-verbatim ada_type_synopsis
 "type Descriptor_t is range -1 .. implementation-defined;")
-    (para "The " (item ada_type "Descriptor_t") " represents a file descriptor.
+    (para "The " (item ada_type "Descriptor_t") " type represents a file descriptor.
       In a POSIX system, a file descriptor may reference an on-disk file, a
       network socket, a named pipe or a hardware device of some description.")
     (para "The range of values representing file descriptors consists
-      of all integers " (item variable "V") " such that " (item variable "V")
+      of all integers " (item variable "F") " such that " (item variable "F")
       " is greater than or equal to " (item constant "-1") ".")
-    (para (render-noescape "a-posix-file-types-fd"))
+    (para z_specification (render-noescape "Z/posix-file-types-fd"))
     (para "The value " (item constant "-1") " represents an invalid file
       descriptor."))
 
   (subsection
     (title "Valid_Descriptor_t")
-    (para-verbatim type_synopsis
+    (para-verbatim ada_type_synopsis
 "subtype Valid_Descriptor_t is Descriptor_t range 0 .. Descriptor_t'Last;")
     (para "The range of values representing valid file descriptors consists
       of all integers " (item variable "V") " such that " (item variable "V")
       " is greater than or equal to " (item constant "0") ".")
-    (para (render-noescape "a-posix-file-types-valid_fd")))
+    (para z_specification (render-noescape "Z/posix-file-types-valid_fd")))
+
+  (subsection
+    (title "File_Name_t")
+    (para-verbatim ada_type_synopsis
+"subtype File_Name_Size_t is Natural range 0 .. Path.Max_Length;
+subtype File_Name_Index_t is File_Name_Size_t range File_Name_Size_t'First + 1 .. Path.Max_Length - 1;
+subtype File_Name_t is String (File_Name_Index_t);")
+    (para "The " (item ada_type "File_Name_t") " type represents a path to
+      a given file.")
+    (para z_specification (render-noescape "Z/posix-file-types-file_name")))
+
+  (subsection
+    (title "Open_Flags_t"))
 
 ) ; end of section

@@ -1,0 +1,9 @@
+(section
+  (ref "posix_user_db")
+  (title "POSIX.User_DB API Reference")
+
+  (contents)
+
+  (include "a-posix-user_db-get_entry_by_name.ud")
+
+) ; end of section

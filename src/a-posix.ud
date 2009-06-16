@@ -9,6 +9,12 @@
       and the original C API.")
     (include "m_proc_map.ud"))
 
+  (include "a-posix-types.ud")
+
+  (include "a-posix-file.ud")
+  (include "a-posix-file_status.ud")
+  (include "a-posix-io.ud")
   (include "a-posix-symlink.ud")
+  (include "a-posix-user_db.ud")
 
 ) ; end of section

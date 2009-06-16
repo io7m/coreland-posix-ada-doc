@@ -4,7 +4,7 @@
   (subsection
     (title "Overview")
 
-    (para "This package provides a set of Ada bindings to the POSIX
-      specification."))
+    (para "This package provides a set of Ada bindings to the
+      IEEE Std 1003.1-2008 (POSIX) specification."))
 
 ) ; end of section

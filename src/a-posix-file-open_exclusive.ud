@@ -1,31 +1,37 @@
 (section
-  (ref "posix_file_open_read_only")
-  (title "POSIX.File.Open_Read_Only")
-  (para procedure_desc "Open file read-only.")
+  (ref "posix_file_open_exclusive")
+  (title "POSIX.File.Open_Exclusive")
+  (para procedure_desc "Create and open file exclusively.")
   (subsection
     (title "Synopsis")
     (para-verbatim procedure_synopsis
 "with POSIX.Errno;
 with POSIX.Error;
 with POSIX.File;
+with POSIX.Permissions;
 
-procedure Open_Read_Only
+procedure Open_Exclusive
   (File_Name    : in String;
    Non_Blocking : in Boolean;
+   Mode         : in Permissions.Mode_t;
    Descriptor   : out Descriptor_t;
    Error_Value  : out Error.Error_t);
 --# global in Errno.Errno_Value;
---# derives Descriptor from File_Name, Non_Blocking &
---#         Error_Value from File_Name, Non_Blocking, Errno.Errno_Value;
+--# derives Descriptor from File_Name, Non_Blocking, Mode &
+--#         Error_Value from File_Name, Non_Blocking, Mode, Errno.Errno_Value;
 --# post ((Descriptor >= 0) and (Error_Value = Error.Error_None)) or
 --#      ((Descriptor = -1) and (Error_Value /= Error.Error_None));
 "))
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Open_Read_Only") " procedure opens
-      the file " (item parameter "File_Name") " for reading, returning
-      a file descriptor in " (item parameter "Descriptor") ".")
+      "The " (item ada_procedure "Open_Exclusive") " procedure creates and opens
+      the file " (item parameter "File_Name") " for writing, returning
+      a file descriptor in " (item parameter "Descriptor") ". If the file "
+      (item parameter "File_Name") " already exists, the procedure fails and
+      sets " (item parameter "Error_Value") " to "
+      (item parameter "Error_File_Exists") ". The file is created with mode "
+      (item parameter "Mode") ".")
     (para
       "If " (item parameter "Non_Blocking") " is specified, the file
        is opened in non-blocking mode."))
@@ -42,6 +48,6 @@ procedure Open_Read_Only
   (subsection
     (title "Implementation")
     (para
-      "The " (item ada_procedure "Open_Read_Only") " procedure is a
+      "The " (item ada_procedure "Open_Exclusive") " procedure is a
       specialization of the more general " (link "posix_file_open" "Open")
       " procedure.")))
