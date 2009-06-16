@@ -1,0 +1,10 @@
+(section
+  (ref "posix_file")
+  (title "POSIX.File API Reference")
+
+  (contents)
+
+  (include "a-posix-file-types.ud")
+  (include "a-posix-file-open_read_only.ud")
+
+) ; end of section

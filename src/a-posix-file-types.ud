@@ -1,0 +1,21 @@
+(section
+  (title "Types")
+
+  (subsection
+    (title "Descriptor_t")
+
+    (para-verbatim type_synopsis
+"type Descriptor_t is range -1 .. implementation-defined;")
+
+    (para "The " (item ada_type "Descriptor_t") " represents a file descriptor.
+      In a POSIX system, a file descriptor may reference an on-disk file, a
+      network socket, a named pipe or a hardware device of some description.")
+    (para "The value " (item constant "-1") " represents an invalid file
+      descriptor.")
+    (para (render-noescape "a-posix-file-types-invalid_fd"))
+    (para "The range of values representing valid file descriptors consists
+      of all integers " (item variable "F") " such that " (item variable "F")
+      " is greater than or equal to " (item constant "0") ".")
+    (para (render-noescape "a-posix-file-types-valid_fd")))
+
+) ; end of section
