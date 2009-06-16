@@ -35,6 +35,20 @@ subtype File_Name_t is String (File_Name_Index_t);")
     (para z_specification (render-noescape "Z/posix-file-types-file_name")))
 
   (subsection
-    (title "Open_Flags_t"))
+    (title "Open_Flags_t")
+    (para-verbatim ada_type_synopsis
+"  type Open_Flag_t is
+    (Append,
+     Create,
+     Exclusive,
+     Read_Only,
+     Read_Write,
+     Truncate,
+     Write_Only);
+
+  type Open_Flags_t is array (Open_Flag_t) of Boolean;")
+    (para "The " (item ada_type "Open_Flags_t") " type represents a set of flags
+      passed to the " (link "posix_file_open" "Open") " procedure.")
+    (para z_specification (render-noescape "Z/posix-file-types-open_flags")))
 
 ) ; end of section

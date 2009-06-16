@@ -2,12 +2,22 @@
 \pagestyle{empty}
 \begin{document}
 \begin{zed}
+Character == 0 \upto 255
+\also
+String == \seq Character
+\end{zed}
+\begin{zed}
 File\_Descriptors == \{ F : \num | F \geq -1 \}
 \end{zed}
 \begin{zed}
-Valid\_Descriptors == \{ V : File\_Descriptors | V \geq 0 \}
+Valid\_File\_Descriptors == \{ V : File\_Descriptors | V \geq 0 \}
 \end{zed}
 \begin{zed}
 File\_Name == \{ F : String | \# F \leq Max\_Path\_Length \}
+\end{zed}
+\begin{zed}
+Open\_Flag ::= Append | Create | Exclusive | Read\_Only | Write\_Only | Truncate
+\also
+Open\_Flags == \power Open\_Flag
 \end{zed}
 \end{document}

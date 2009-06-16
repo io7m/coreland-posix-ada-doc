@@ -1,0 +1,5 @@
+\begin{zed}
+Open\_Flag ::= Append | Create | Exclusive | Read\_Only | Write\_Only | Truncate
+\also
+Open\_Flags == \power Open\_Flag
+\end{zed}

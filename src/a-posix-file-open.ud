@@ -10,14 +10,6 @@ with POSIX.Error;
 with POSIX.File;
 with POSIX.Permissions;
 
-Append     : constant Open_Flags_t;
-Create     : constant Open_Flags_t;
-Exclusive  : constant Open_Flags_t;
-Read_Only  : constant Open_Flags_t;
-Read_Write : constant Open_Flags_t;
-Truncate   : constant Open_Flags_t;
-Write_Only : constant Open_Flags_t;
-
 procedure Open
   (File_Name    : in String;
    Non_Blocking : in Boolean;
@@ -42,6 +34,8 @@ procedure Open
       (item parameter "Flags") " parameter. For the precise
       semantics of these flags, check the POSIX specification "
         (footnote (link-ext "http://www.opengroup.org/onlinepubs/9699919799/functions/open.html")) ".")
+    (para
+      "The set of valid combinations of flags is implementation-defined.")
     (para
       "If " (item parameter "Non_Blocking") " is specified, the file
        is opened in non-blocking mode."))
