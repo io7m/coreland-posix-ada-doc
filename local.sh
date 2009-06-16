@@ -35,3 +35,9 @@ done
 echo ")" >> src/m_proc_map.ud.tmp
 
 mv src/m_proc_map.ud.tmp src/m_proc_map.ud || fatal "could not replace m_proc_map.ud"
+
+#
+# Copy Z images.
+#
+
+rsync -avz src/Z release/ || fatal "could not rsync Z images"

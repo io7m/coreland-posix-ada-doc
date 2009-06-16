@@ -1,0 +1,3 @@
+\begin{zed}
+Valid\_Descriptors == \{ V : File\_Descriptors | V > 0 \}
+\end{zed}
