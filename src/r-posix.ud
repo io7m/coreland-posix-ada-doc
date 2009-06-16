@@ -1,6 +1,6 @@
 (section
   (ref "rationale")
-  (title "POSIX Bindings Rationale")
+  (title "Binding Design Rationale")
   (contents)
 
 ) ; end of section
