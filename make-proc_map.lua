@@ -39,7 +39,7 @@ while true do
   if not spec_line then error ("unexpected EOF before package name") end
   spec_line = spec_line:gsub ("^[%s]*", "")
 
-  local pkg_match = spec_line:match ("^package ([a-zA-Z0-9%._]+) is")
+  local pkg_match = spec_line:match ("^package ([a-zA-Z0-9%._]+)")
   if pkg_match then
     package = pkg_match
     break
