@@ -1,4 +1,5 @@
 (section
+  (ref "posix")
   (title "POSIX API Reference")
   (contents)
 
@@ -7,5 +8,7 @@
     (para "The following table shows the mapping between the Ada subprograms
       and the original C API.")
     (include "m_proc_map.ud"))
+
+  (include "a-posix-symlink.ud")
 
 ) ; end of section

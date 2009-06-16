@@ -1,0 +1,24 @@
+(section
+  (ref "posix_symlink_read_link")
+  (title "POSIX.Symlink.Read_Link")
+  (para procedure_desc "Read symbolic link.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.Symlink;
+
+procedure Read_Link
+  (File_Name   : in String;
+   Buffer      : out File.File_Name_t;
+   Buffer_Size : out File.File_Name_Size_t;
+   Error_Value : out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Buffer, Buffer_Size from File_Name &
+--#         Error_Value         from File_Name, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Read_Link") " procedure.")))

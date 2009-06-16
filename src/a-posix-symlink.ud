@@ -1,0 +1,10 @@
+(section
+  (ref "posix_symlink")
+  (title "POSIX.Symlink API Reference")
+
+  (contents)
+
+  (include "a-posix-symlink-create.ud")
+  (include "a-posix-symlink-read_link.ud")
+
+) ; end of section

@@ -1,0 +1,6 @@
+(section
+  (ref "rationale")
+  (title "POSIX Bindings Rationale")
+  (contents)
+
+) ; end of section

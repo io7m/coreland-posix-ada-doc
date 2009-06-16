@@ -1,0 +1,23 @@
+(section
+  (ref "posix_symlink_create")
+  (title "POSIX.Symlink.Create")
+  (para procedure_desc "Create symbolic link.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.Symlink;
+
+procedure Create
+  (File_Name   : in String;
+   Target      : in String;
+   Error_Value : out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from File_Name, Target, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Create") " procedure.")))
+
