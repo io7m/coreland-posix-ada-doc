@@ -1,0 +1,5 @@
+(table procedure_map
+  (t-row (item "POSIX API") (item "Ada equivalent"))
+(t-row (item "readlink")(item (link "posix_symlink_read_link" "POSIX.Symlink.Read_Link")))
+(t-row (item "symlink")(item (link "posix_symlink_create" "POSIX.Symlink.Create")))
+)

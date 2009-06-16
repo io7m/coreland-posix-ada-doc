@@ -1,0 +1,10 @@
+(section
+  (title "Orientation")
+
+  (section
+    (title "Overview")
+
+    (para "This package provides a set of Ada bindings to the POSIX
+      specification."))
+
+) ; end of section
