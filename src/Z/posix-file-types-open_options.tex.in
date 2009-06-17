@@ -1,0 +1,7 @@
+\begin{zed}
+Open\_Option ::= Append | Close\_On\_Execute | Create | Is\_Directory |\\
+                 Exclusive | No\_Controlling\_TTY | No\_Follow\_Symlinks |\\
+                 Truncate | TTY\_Initialize
+\also
+Open\_Options == \power Open\_Option
+\end{zed}

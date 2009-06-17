@@ -28,27 +28,43 @@
     (title "File_Name_t")
     (para-verbatim ada_type_synopsis
 "subtype File_Name_Size_t is Natural range 0 .. Path.Max_Length;
-subtype File_Name_Index_t is File_Name_Size_t range File_Name_Size_t'First + 1 .. Path.Max_Length - 1;
+subtype File_Name_Index_t is File_Name_Size_t range File_Name_Size_t'First + 1 .. Path.Max_Length;
 subtype File_Name_t is String (File_Name_Index_t);")
     (para "The " (item ada_type "File_Name_t") " type represents a path to
       a given file.")
     (para z_specification (render-noescape "Z/posix-file-types-file_name")))
 
   (subsection
-    (title "Open_Flags_t")
+    (title "Open_Access_Mode_t")
     (para-verbatim ada_type_synopsis
-"  type Open_Flag_t is
-    (Append,
-     Create,
-     Exclusive,
-     Read_Only,
-     Read_Write,
-     Truncate,
-     Write_Only);
+"type Open_Access_Mode_t is
+  (Execute_Only,
+   Read_Only,
+   Read_Write,
+   Search_Only,
+   Write_Only);")
+    (para "The " (item ada_type "Open_Access_Mode_t") " type specifies the
+      access mode that the " (link "posix_file_open" "Open") " procedure
+      will use.")
+    (para z_specification (render-noescape "Z/posix-file-types-open_access_mode")))
 
-  type Open_Flags_t is array (Open_Flag_t) of Boolean;")
-    (para "The " (item ada_type "Open_Flags_t") " type represents a set of flags
-      passed to the " (link "posix_file_open" "Open") " procedure.")
-    (para z_specification (render-noescape "Z/posix-file-types-open_flags")))
+  (subsection
+    (title "Open_Options_t")
+    (para-verbatim ada_type_synopsis
+"type Open_Option_t is
+  (Append,
+   Close_On_Execute,
+   Create,
+   Is_Directory,
+   Exclusive,
+   No_Controlling_TTY,
+   No_Follow_Symlinks,
+   Truncate,
+   TTY_Initialize);
+
+type Open_Options_t is array (Open_Option_t) of Boolean;")
+    (para "The " (item ada_type "Open_Options_t") " type specifies various
+      options for the " (link "posix_file_open" "Open") " procedure.")
+    (para z_specification (render-noescape "Z/posix-file-types-open_options")))
 
 ) ; end of section

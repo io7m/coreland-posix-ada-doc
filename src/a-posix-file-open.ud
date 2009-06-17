@@ -12,14 +12,15 @@ with POSIX.Permissions;
 
 procedure Open
   (File_Name    : in String;
+   Access_Mode  : in Open_Access_Mode_t;
+   Options      : in Open_Options_t;
    Non_Blocking : in Boolean;
    Mode         : in Permissions.Mode_t;
-   Flags        : in Open_Flags_t;
    Descriptor   : out Descriptor_t;
    Error_Value  : out Error.Error_t);
 --# global in Errno.Errno_Value;
---# derives Descriptor from File_Name, Non_Blocking, Mode, Flags &
---#         Error_Value from File_Name, Non_Blocking, Mode, Flags, Errno.Errno_Value;
+--# derives Descriptor  from File_Name, Non_Blocking, Mode, Access_Mode, Options &
+--#         Error_Value from File_Name, Non_Blocking, Mode, Access_Mode, Options, Errno.Errno_Value;
 --# post ((Descriptor >= 0) and (Error_Value = Error.Error_None)) or
 --#      ((Descriptor = -1) and (Error_Value /= Error.Error_None));
 "))
@@ -30,9 +31,10 @@ procedure Open
       the file " (item parameter "File_Name") ", returning
       a file descriptor in " (item parameter "Descriptor") ".")
     (para
-      "The behaviour of the procedure is controlled via the "
-      (item parameter "Flags") " parameter. For the precise
-      semantics of these flags, check the POSIX specification "
+      "The behaviour of the procedure is controlled via the combination "
+      "of the " (item parameter "Access_Mode") " and " (item parameter "Options")
+      " parameters. For the precise semantics of these flags, check the POSIX
+      specification "
         (footnote (link-ext "http://www.opengroup.org/onlinepubs/9699919799/functions/open.html")) ".")
     (para
       "The set of valid combinations of flags is implementation-defined.")

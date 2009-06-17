@@ -16,8 +16,13 @@ Valid\_File\_Descriptors == \{ V : File\_Descriptors | V \geq 0 \}
 File\_Name == \{ F : String | \# F \leq Max\_Path\_Length \}
 \end{zed}
 \begin{zed}
-Open\_Flag ::= Append | Create | Exclusive | Read\_Only | Write\_Only | Truncate
+Open\_Access\_Mode ::= Execute\_Only | Read\_Only | Read\_Write | Search\_Only | Write\_Only
+\end{zed}
+\begin{zed}
+Open\_Option ::= Append | Close\_On\_Execute | Create | Is\_Directory |\\
+                 Exclusive | No\_Controlling\_TTY | No\_Follow\_Symlinks |\\
+                 Truncate | TTY\_Initialize
 \also
-Open\_Flags == \power Open\_Flag
+Open\_Options == \power Open\_Option
 \end{zed}
 \end{document}

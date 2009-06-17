@@ -1,0 +1,3 @@
+\begin{zed}
+Open\_Access\_Mode ::= Execute\_Only | Read\_Only | Read\_Write | Search\_Only | Write\_Only
+\end{zed}
