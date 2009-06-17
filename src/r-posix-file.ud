@@ -1,0 +1,7 @@
+(section
+  (ref "rd_posix_file")
+  (title "POSIX.File API Design/Rationale")
+
+  (contents)
+
+) ; end of section

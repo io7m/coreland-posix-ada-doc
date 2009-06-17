@@ -1,0 +1,3 @@
+\begin{zed}
+Offset == { O : \nat }
+\end{zed}

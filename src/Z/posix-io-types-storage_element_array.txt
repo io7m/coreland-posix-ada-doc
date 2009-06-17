@@ -1,0 +1,1 @@
+Storage_Element_Array == seq Storage_Element

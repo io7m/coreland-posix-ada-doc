@@ -1,0 +1,24 @@
+(section
+  (title "Types")
+
+  (subsection
+    (title "Storage_Element_t")
+    (para-verbatim ada_type_synopsis
+"type Storage_Element_t is mod 2 ** implementation-defined;")
+    (para "The " (item ada_type "Storage_Element_t") " type represents a
+      single element of storage. On the majority of systems, this means
+      a single eight-bit byte, or octet.")
+    (para-verbatim z_specification
+      (render-noescape "Z/posix-io-types-storage_element")))
+
+  (subsection
+    (title "Storage_Element_Array_t")
+    (para-verbatim ada_type_synopsis
+"subtype Storage_Element_Array_Index_t is Natural range Natural'First .. Natural'Last;
+type Storage_Element_Array_t is array (Storage_Element_Array_Index_t range <>) of Storage_Element_t;")
+    (para "The " (item ada_type "Storage_Element_Array_t") " type represents a
+      sequence of storage elements.")
+    (para-verbatim z_specification
+      (render-noescape "Z/posix-io-types-storage_element_array")))
+
+) ; end of section

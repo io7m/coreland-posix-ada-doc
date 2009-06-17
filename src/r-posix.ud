@@ -1,6 +1,8 @@
 (section
   (ref "rationale")
-  (title "Binding Design Rationale")
+  (title "Binding Design and Rationale")
   (contents)
+
+  (include "r-posix-file.ud")
 
 ) ; end of section

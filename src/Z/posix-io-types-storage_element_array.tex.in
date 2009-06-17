@@ -1,0 +1,3 @@
+\begin{zed}
+Storage\_Element\_Array == seq \ Storage\_Element
+\end{zed}
