@@ -1,0 +1,3 @@
+Open_Option ::= Append | Close_On_Execute | Create | Is_Directory | Exclusive |
+                No_Controlling_TTY | No_Follow_Symlinks | Truncate | TTY_Initialize
+Open_Option == ℙ Open_Option

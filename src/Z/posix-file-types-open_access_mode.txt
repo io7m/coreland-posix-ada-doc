@@ -1,0 +1,1 @@
+Open_Access_Mode ::= Execute_Only | Read_Only | Read_Write | Search_Only | Write_Only

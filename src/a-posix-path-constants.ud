@@ -1,0 +1,18 @@
+(section
+  (title "Constants")
+
+  (subsection
+    (title "Max_Length")
+    (para
+      "The " (item constant "Max_Length") " constant specifies the
+      implementation-defined maximum length of a path name. The constant
+      is a natural number of a value greater than or equal to "
+      (item constant "256") ".")
+    (para-verbatim z_specification (render-noescape "Z/posix-path-max_length"))
+    (para
+      "The constant is analogous to the POSIX " (item constant "PATH_MAX")
+      " constant " (footnote
+      (link-ext "http://www.opengroup.org/onlinepubs/9699919799/basedefs/limits.h.html"))
+      "."))
+
+) ; end of section

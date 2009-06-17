@@ -1,0 +1,3 @@
+| Path_Max_Length : ℕ
+|-------
+| Path_Max_Length ≥ 256

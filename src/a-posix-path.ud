@@ -4,15 +4,6 @@
 
   (contents)
 
-  (include "a-posix-file-types.ud")
-
-  (include "a-posix-file-open.ud")
-  (include "a-posix-file-open_read_only.ud")
-  (include "a-posix-file-change_mode.ud")
-  (include "a-posix-file-change_descriptor_mode.ud")
-  (include "a-posix-file-change_ownership.ud")
-  (include "a-posix-file-change_descriptor_ownership.ud")
-  (include "a-posix-file-close.ud")
-  (include "a-posix-file-unlink.ud")
+  (include "a-posix-path-constants.ud")
 
 ) ; end of section

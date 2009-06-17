@@ -1,0 +1,5 @@
+\begin{axdef}
+Path\_Max\_Length : \nat
+\where
+Path\_Max\_Length \geq 256
+\end{axdef}

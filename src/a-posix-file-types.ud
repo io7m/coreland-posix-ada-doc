@@ -11,7 +11,7 @@
     (para "The range of values representing file descriptors consists
       of all integers " (item variable "F") " such that " (item variable "F")
       " is greater than or equal to " (item constant "-1") ".")
-    (para z_specification (render-noescape "Z/posix-file-types-fd"))
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-fd"))
     (para "The value " (item constant "-1") " represents an invalid file
       descriptor."))
 
@@ -22,7 +22,7 @@
     (para "The range of values representing valid file descriptors consists
       of all integers " (item variable "V") " such that " (item variable "V")
       " is greater than or equal to " (item constant "0") ".")
-    (para z_specification (render-noescape "Z/posix-file-types-valid_fd")))
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-valid_fd")))
 
   (subsection
     (title "File_Name_t")
@@ -32,7 +32,7 @@ subtype File_Name_Index_t is File_Name_Size_t range File_Name_Size_t'First + 1 .
 subtype File_Name_t is String (File_Name_Index_t);")
     (para "The " (item ada_type "File_Name_t") " type represents a path to
       a given file.")
-    (para z_specification (render-noescape "Z/posix-file-types-file_name")))
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-file_name")))
 
   (subsection
     (title "Open_Access_Mode_t")
@@ -46,7 +46,7 @@ subtype File_Name_t is String (File_Name_Index_t);")
     (para "The " (item ada_type "Open_Access_Mode_t") " type specifies the
       access mode that the " (link "posix_file_open" "Open") " procedure
       will use.")
-    (para z_specification (render-noescape "Z/posix-file-types-open_access_mode")))
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-open_access_mode")))
 
   (subsection
     (title "Open_Options_t")
@@ -65,6 +65,6 @@ subtype File_Name_t is String (File_Name_Index_t);")
 type Open_Options_t is array (Open_Option_t) of Boolean;")
     (para "The " (item ada_type "Open_Options_t") " type specifies various
       options for the " (link "posix_file_open" "Open") " procedure.")
-    (para z_specification (render-noescape "Z/posix-file-types-open_options")))
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-open_options")))
 
 ) ; end of section
