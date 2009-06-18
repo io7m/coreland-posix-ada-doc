@@ -1,3 +1,41 @@
 (section
   (ref "posix_io_write")
-)
+  (title "POSIX.IO.Write")
+  (para procedure_desc "Write data to file descriptor.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+
+procedure Write
+  (Descriptor       : in     File.Valid_Descriptor_t;
+   Buffer           : in     Storage_Element_Array_t;
+   Element_Limit    : in     Storage_Element_Array_Size_t;
+   Elements_Written :    out Storage_Element_Array_Size_t;
+   Error_Value      :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Elements_Written, Error_Value from Descriptor, Buffer, Element_Limit, Errno.Errno_Value;
+--# pre Element_Limit <= Buffer'Length;
+--# post Elements_Written <= Element_Limit;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Write") " procedure writes "
+      (item parameter "Element_Limit") " elements to the open file descriptor "
+      (item parameter "Descriptor") " from " (item parameter "Buffer") ". It
+      returns the number of elements actually written in "
+      (item parameter "Elements_Written") "."))
+  (subsection
+    (title "Preconditions")
+    (para
+      "The value of " (item parameter "Element_Limit") " must be less than
+       or equal to the value of " (item parameter "Buffer") "'"
+      (item ada_attribute "Length") "."))
+  (subsection
+    (title "Postconditions")
+    (para
+      "The value of " (item parameter "Elements_Written") " will be less than
+       or equal to the value of " (item parameter "Element_Limit") ".")))

@@ -1,2 +1,35 @@
 (section
-  (ref "posix_file_change_descriptor_ownership"))
+  (ref "posix_file_change_descriptor_ownership")
+  (title "POSIX.File.Change_Descriptor_Ownership")
+  (para procedure_desc "Change ownership of file by descriptor.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+with POSIX.User_DB;
+
+procedure Change_Descriptor_Ownership
+  (Descriptor  : in Valid_Descriptor_t;
+   Owner       : in User_DB.User_ID_t;
+   Group       : in User_DB.Group_ID_t;
+   Error_Value : out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Descriptor, Owner, Group, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Change_Descriptor_Ownership") " procedure changes the
+      user and/or group ownership of the file referenced by the file descriptor "
+      (item parameter "Descriptor") " to " (item parameter "Owner") " and/or "
+      (item parameter "Group") ".")
+    (para
+      "To leave the owner of the file unchanged, "
+      (item parameter "User_DB.Unspecified_User") " may be passed as "
+      (item parameter "Owner") ".")
+    (para
+      "To leave the owner of the file unchanged, "
+      (item parameter "User_DB.Unspecified_Group") " may be passed as "
+      (item parameter "Group") ".")))

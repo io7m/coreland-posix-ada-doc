@@ -1,7 +1,41 @@
 (section
   (ref "rd_posix_file")
-  (title "POSIX.File API Design/Rationale")
+  (title "POSIX.File")
 
   (contents)
+
+  (section
+    (title "Valid_Descriptor_t")
+    (subsection
+      (title "Rationale")
+      (para "The " (item ada_type "Valid_Descriptor_t") " subtype is used to
+        help prevent the passing of an invalid file descriptor to subprograms.")))
+
+  (section
+    (title "Open_Options_t and Open_Access_Mode_t")
+    (subsection
+      (title "Rationale")
+      (para "The POSIX specification for " (item function "open") " specifies
+        that applications may use one of an initial set of flags with any
+        combination of a second set of optional flags.")
+      (para "The original interface combines all the flags into a single "
+        (item parameter "flags") " parameter and no incorrect usage can be
+        detected at compile-time.")
+      (para "The Ada binding splits the flags into an enumeration type "
+        (item ada_type "Open_Access_Mode_t") " and an enumeration-indexed array
+        of " (item ada_type "Boolean") " flags " (item ada_type "Open_Options_t")
+        ". This prevents programs from passing many invalid flag combinations to
+        the subprogram, statically."))
+    (subsection
+      (title "Design/Implementation")
+      (para "Not all platforms support all of the flags specified by POSIX.
+        The integer values of the various POSIX constants are detected at
+        compile time and a function is defined that maps the Ada enumeration
+        values to the original integer values. If a constant is not defined
+        on the current platform, the function maps the relevant enumeration
+        value to an invalid value.")
+      (para "At run-time, the Ada " (link "posix_file_open" "Open")
+        " subprogram checks whether any of the given options or the given
+        access mode maps to an invalid value and if so, signals an error.")))
 
 ) ; end of section

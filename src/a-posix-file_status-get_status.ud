@@ -1,2 +1,31 @@
 (section
-  (ref "posix_file_status_get_status"))
+  (ref "posix_file_status_get_status")
+  (title "POSIX.File_Status.Get_Status")
+  (para procedure_desc "Get file status.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+with POSIX.File_Status;
+
+procedure Get_Status
+  (File_Name   : in String;
+   Status      : out Status_t;
+   Error_Value : out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Status, Error_Value from File_Name, Errno.Errno_Value;
+--# post ((Is_Valid (Status))     and (Error_Value = Error.Error_None)) or
+--#      ((not Is_Valid (Status)) and (Error_Value /= Error.Error_None));
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Get_Status") " procedure retrieves
+      status information for the file " (item parameter "File_Name") "."))
+  (subsection
+    (title "Postconditions")
+    (para "The procedure will return a valid status descriptor on
+      success and an invalid status descriptor on failure.")))
+

@@ -1,10 +1,21 @@
 (section
   (ref "posix_file_status")
-  (title "POSIX.File_Status API Reference")
+  (title "POSIX.File_Status")
 
   (contents)
 
+  (include "a-posix-file_status-types.ud")
+
   (include "a-posix-file_status-get_status.ud")
   (include "a-posix-file_status-get_descriptor_status.ud")
+
+  (include "a-posix-file_status-get_device_id.ud")
+  (include "a-posix-file_status-get_group_id.ud")
+  (include "a-posix-file_status-get_inode.ud")
+  (include "a-posix-file_status-get_mode.ud")
+  (include "a-posix-file_status-get_number_of_links.ud")
+  (include "a-posix-file_status-get_size.ud")
+  (include "a-posix-file_status-get_user_id.ud")
+  (include "a-posix-file_status-is_valid.ud")
 
 ) ; end of section

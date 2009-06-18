@@ -1,2 +1,24 @@
 (section
-  (ref "posix_file_unlink"))
+  (ref "posix_file_unlink")
+  (title "POSIX.File.Unlink")
+  (para procedure_desc "Unlink file.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+
+procedure Unlink
+  (File_Name   : in String;
+   Error_Value : out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from File_Name, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Unlink") " procedure unlinks the file "
+      (item parameter "File_Name") ". If the given name was the last link
+      to the file and no processes have the file open, it is deleted and
+      the space used is reclaimed.")))

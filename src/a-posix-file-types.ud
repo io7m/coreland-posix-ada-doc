@@ -67,4 +67,12 @@ type Open_Options_t is array (Open_Option_t) of Boolean;")
       options for the " (link "posix_file_open" "Open") " procedure.")
     (para-verbatim z_specification (render-noescape "Z/posix-file-types-open_options")))
 
+  (subsection
+    (title "Offset_t")
+    (para-verbatim ada_type_synopsis
+"type Offset_t is mod 2 ** implementation-defined;")
+    (para "The " (item ada_type "Offset_t") " type represents an offset in an
+      on-disk file.")
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-offset")))
+
 ) ; end of section

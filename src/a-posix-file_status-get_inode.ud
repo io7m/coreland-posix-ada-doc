@@ -1,0 +1,25 @@
+(section
+  (ref "posix_file_status_get_inode")
+  (title "POSIX.File_Status.Get_INode")
+  (para function_desc "Get inode number of file.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+with POSIX.File_Status;
+
+function Get_INode (Status : in Status_t) return INode_t;
+--# pre Is_Valid (Status);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Get_INode") " function retrieves the inode
+      number of the file referenced by " (item parameter "Status") "."))
+  (subsection
+    (title "Preconditions")
+    (para
+      "The " (item parameter "Status") " parameter must refer to a "
+      (link "posix_file_status_is_valid" "valid") " status descriptor.")))

@@ -47,6 +47,7 @@ hr {
 .exception,
 .file_name,
 .file_suffix,
+.function,
 .option,
 .procedure_synopsis,
 .function_synopsis,
@@ -124,3 +125,5 @@ table.exception_table td {
   padding: 1em;
   font-family: monospace;
 }
+
+table.procedure_map td { padding-right: 2em; }

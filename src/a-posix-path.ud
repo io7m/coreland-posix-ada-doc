@@ -1,6 +1,6 @@
 (section
   (ref "posix_path")
-  (title "POSIX.Path API Reference")
+  (title "POSIX.Path")
 
   (contents)
 

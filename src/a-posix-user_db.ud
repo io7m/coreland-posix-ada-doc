@@ -1,6 +1,6 @@
 (section
   (ref "posix_user_db")
-  (title "POSIX.User_DB API Reference")
+  (title "POSIX.User_DB")
 
   (contents)
 

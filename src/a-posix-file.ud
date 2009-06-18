@@ -1,6 +1,6 @@
 (section
   (ref "posix_file")
-  (title "POSIX.File API Reference")
+  (title "POSIX.File")
 
   (contents)
 

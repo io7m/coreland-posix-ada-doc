@@ -1,0 +1,27 @@
+(section
+  (ref "posix_file_status_get_user_id")
+  (title "POSIX.File_Status.Get_User_ID")
+  (para function_desc "Get user ID of file owner.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+with POSIX.File_Status;
+with POSIX.User_DB;
+
+function Get_User_ID (Status : in Status_t) return User_DB.User_ID_t;
+--# pre Is_Valid (Status);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Get_User_ID") " function retrieves the user ID
+      of the owner of the file referenced by " (item parameter "Status")
+      "."))
+  (subsection
+    (title "Preconditions")
+    (para
+      "The " (item parameter "Status") " parameter must refer to a "
+      (link "posix_file_status_is_valid" "valid") " status descriptor.")))

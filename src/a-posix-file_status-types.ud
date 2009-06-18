@@ -1,0 +1,29 @@
+(section
+  (title "Types")
+
+  (subsection
+    (title "Status_t")
+    (para-verbatim ada_type_synopsis
+"type Status_t is private;")
+    (para "The " (item ada_type "Status_t") " type represents a set of
+      metadata for a given file. The type is entirely private and the
+      contents may only be accessed via a set of functions defined in
+      the " (item ada_package "File_Status") " package."))
+
+  (subsection
+    (title "Device_ID_t")
+    (para-verbatim ada_type_synopsis
+"type Device_ID_t is range 0 .. implementation-defined;")
+    (para "The " (item ada_type "Device_ID_t") " type represents an ID
+      number of a device.")
+    (para-verbatim z_specification (render-noescape "Z/posix-file_status-types-device_id")))
+
+  (subsection
+    (title "INode_t")
+    (para-verbatim ada_type_synopsis
+"type INode_t is range 0 .. implementation-defined;")
+    (para "The " (item ada_type "INode_t") " type represents the filesystem inode
+      number of a file.")
+    (para-verbatim z_specification (render-noescape "Z/posix-file_status-types-inode")))
+
+) ; end of section

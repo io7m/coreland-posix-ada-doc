@@ -1,0 +1,3 @@
+\begin{zed}
+INode == { I : \nat }
+\end{zed}

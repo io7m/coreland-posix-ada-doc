@@ -6,4 +6,4 @@
     Ada types. They are essentially just included to allow the formal
     Z specification to pass type checks.")
 
-  (para (render-noescape "a-posix-types")))
+  (para-verbatim z_specification (render-noescape "Z/posix-ada-types")))

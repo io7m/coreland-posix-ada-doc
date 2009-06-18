@@ -1,8 +1,10 @@
 (section
   (ref "posix_io")
-  (title "POSIX.IO API Reference")
+  (title "POSIX.IO")
 
   (contents)
+
+  (include "a-posix-io-types.ud")
 
   (include "a-posix-io-read.ud")
   (include "a-posix-io-write.ud")
