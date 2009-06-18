@@ -4,5 +4,6 @@
   (contents)
 
   (include "r-posix-file.ud")
+  (include "r-posix-file_status.ud")
 
 ) ; end of section

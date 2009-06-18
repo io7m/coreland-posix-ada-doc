@@ -1,0 +1,28 @@
+(section
+  (ref "rd_posix_file_status")
+  (title "POSIX.File_Status")
+
+  (contents)
+
+  (section
+    (title "Status_t")
+    (subsection
+      (title "Rationale")
+      (para "The " (item ada_type "Status_t") " type is implemented as a private
+        type due to the widely varying definitions of " (item struct "struct stat")
+        " across platforms."))
+    (subsection
+      (title "Design/Implementation")
+      (para "The package is implemented as a private type and a set of accessor
+        functions. The Ada functions directly call a set of C functions which,
+        in turn, directly access fields of a " (item struct "struct stat") ".")
+      (para "In order to avoid heap allocation, a private array type is defined
+        matching the size of " (item struct "struct stat") ", detected at
+        compile-time. This private type is embedded in the "
+        (item ada_type "Status_t") " type and passed to the C functions by
+        address.")
+      (para "This design also allows the simple addition of platform-specific
+        extensions by defining extra C functions and new accessor functions in
+        a child package.")))
+
+) ; end of section
