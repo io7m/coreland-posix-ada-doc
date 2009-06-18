@@ -11,9 +11,9 @@ with POSIX.File;
 with POSIX.File_Status;
 
 procedure Get_Descriptor_Status
-  (Descriptor  : in File.Valid_Descriptor_t;
-   Status      : out Status_t;
-   Error_Value : out Error.Error_t);
+  (Descriptor  : in     File.Valid_Descriptor_t;
+   Status      :    out Status_t;
+   Error_Value :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Status      from Descriptor &
 --#         Error_Value from Descriptor, Errno.Errno_Value;

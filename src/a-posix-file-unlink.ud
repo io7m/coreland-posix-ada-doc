@@ -10,8 +10,8 @@ with POSIX.Error;
 with POSIX.File;
 
 procedure Unlink
-  (File_Name   : in String;
-   Error_Value : out Error.Error_t);
+  (File_Name   : in     String;
+   Error_Value :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Error_Value from File_Name, Errno.Errno_Value;
 "))

@@ -10,10 +10,10 @@ with POSIX.Error;
 with POSIX.Symlink;
 
 procedure Read_Link
-  (File_Name   : in String;
-   Buffer      : out File.File_Name_t;
-   Buffer_Size : out File.File_Name_Size_t;
-   Error_Value : out Error.Error_t);
+  (File_Name   : in     String;
+   Buffer      :    out File.File_Name_t;
+   Buffer_Size :    out File.File_Name_Size_t;
+   Error_Value :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Buffer, Buffer_Size from File_Name &
 --#         Error_Value         from File_Name, Errno.Errno_Value;

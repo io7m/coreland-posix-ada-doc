@@ -10,10 +10,10 @@ with POSIX.Error;
 with POSIX.File;
 
 procedure Open_Read_Write
-  (File_Name    : in String;
-   Non_Blocking : in Boolean;
-   Descriptor   : out Descriptor_t;
-   Error_Value  : out Error.Error_t);
+  (File_Name    : in     String;
+   Non_Blocking : in     Boolean;
+   Descriptor   :    out Descriptor_t;
+   Error_Value  :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Descriptor from File_Name, Non_Blocking &
 --#         Error_Value from File_Name, Non_Blocking, Errno.Errno_Value;

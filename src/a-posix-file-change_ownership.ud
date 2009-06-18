@@ -11,10 +11,10 @@ with POSIX.File;
 with POSIX.User_DB;
 
 procedure Change_Ownership
-  (File_Name   : in String;
-   Owner       : in User_DB.User_ID_t;
-   Group       : in User_DB.Group_ID_t;
-   Error_Value : out Error.Error_t);
+  (File_Name   : in     String;
+   Owner       : in     User_DB.User_ID_t;
+   Group       : in     User_DB.Group_ID_t;
+   Error_Value :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Error_Value from File_Name, Owner, Group, Errno.Errno_Value;
 "))

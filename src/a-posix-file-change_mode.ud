@@ -11,9 +11,9 @@ with POSIX.File;
 with POSIX.Permissions;
 
 procedure Change_Mode
-  (File_Name   : in String;
-   Mode        : in Permissions.Mode_t;
-   Error_Value : out Error.Error_t);
+  (File_Name   : in     String;
+   Mode        : in     Permissions.Mode_t;
+   Error_Value :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Error_Value from File_Name, Mode, Errno.Errno_Value;
 "))

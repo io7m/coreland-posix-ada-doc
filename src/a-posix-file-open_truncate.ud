@@ -11,11 +11,11 @@ with POSIX.File;
 with POSIX.Permissions;
 
 procedure Open_Truncate
-  (File_Name    : in String;
-   Non_Blocking : in Boolean;
-   Mode         : in Permissions.Mode_t;
-   Descriptor   : out Descriptor_t;
-   Error_Value  : out Error.Error_t);
+  (File_Name    : in     String;
+   Non_Blocking : in     Boolean;
+   Mode         : in     Permissions.Mode_t;
+   Descriptor   :    out Descriptor_t;
+   Error_Value  :    out Error.Error_t);
 --# global in Errno.Errno_Value;
 --# derives Descriptor from File_Name, Non_Blocking, Mode &
 --#         Error_Value from File_Name, Non_Blocking, Mode, Errno.Errno_Value;
