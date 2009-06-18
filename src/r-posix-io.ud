@@ -1,0 +1,20 @@
+(section
+  (ref "rd_posix_io")
+  (title "POSIX.IO")
+
+  (contents)
+
+  (section
+    (title "Read/Write")
+    (subsection
+      (title "Rationale")
+      (para "The " (link "posix_io_read" "Read") " and "
+        (link "posix_io_write" "Write") " procedures take an explicit "
+        (item parameter "Element_Limit") " parameter limiting
+        the number of elements read or written from the given buffer.
+        This is to work around the lack of array slices in SPARK.")
+      (para "The procedures specify explicit preconditions so that
+        SPARK can statically check that the element limit is less than
+        or equal to the number of elements in the given buffer.")))
+
+) ; end of section
