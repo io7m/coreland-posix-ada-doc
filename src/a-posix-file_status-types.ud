@@ -26,4 +26,12 @@
       number of a file.")
     (para-verbatim z_specification (render-noescape "Z/posix-file_status-types-inode")))
 
+  (subsection
+    (title "Link_Count_t")
+    (para-verbatim ada_type_synopsis
+"type INode_t is mod 2 ** implementation-defined;")
+    (para "The " (item ada_type "Link_Count_t") " type represents the number of
+      hard links to a file.")
+    (para-verbatim z_specification (render-noescape "Z/posix-file_status-types-link_count")))
+
 ) ; end of section

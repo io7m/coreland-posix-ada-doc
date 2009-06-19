@@ -10,7 +10,7 @@ with POSIX.Error;
 with POSIX.File;
 with POSIX.File_Status;
 
-function Get_Number_Of_Links (Status : in Status_t) return Positive;
+function Get_Number_Of_Links (Status : in Status_t) return Link_Count_t;
 --# pre Is_Valid (Status);
 "))
   (subsection
