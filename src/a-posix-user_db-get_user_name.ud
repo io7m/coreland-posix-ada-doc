@@ -1,0 +1,29 @@
+(section
+  (ref "posix_user_db_get_user_name")
+  (title "POSIX.User_DB.Get_User_Name")
+  (para procedure_desc "Retrieve user name from database entry.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"
+procedure Get_User_Name
+  (Database_Entry : in     Database_Entry_t;
+   User_Name      :    out User_Name_t;
+   Last_Index     :    out User_Name_Index_t);
+--# derives User_Name, Last_Index from Database_Entry;
+--# pre Is_Valid (Database_Entry);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Get_User_Name") " procedure retrieves
+      the user name field from the database entry "
+      (item parameter "Database_Entry") ". The user name is returned
+      in " (item parameter "User_Name") " and the last index used in "
+      (item parameter "User_Name") " is returned in "
+      (item parameter "Last_Index") "."))
+  (subsection
+    (title "Preconditions")
+    (para
+      (item parameter "Database_Entry") "must refer to a "
+      (link "posix_user_db_is_valid" "valid") " database entry.")))

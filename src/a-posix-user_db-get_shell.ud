@@ -1,0 +1,29 @@
+(section
+  (ref "posix_user_db_get_shell")
+  (title "POSIX.User_DB.Get_Shell")
+  (para procedure_desc "Retrieve user shell from database entry.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"
+procedure Get_Shell
+  (Database_Entry : in     Database_Entry_t;
+   Shell_Path     :    out Shell_Path_t;
+   Last_Index     :    out Shell_Path_Index_t);
+--# derives Shell_Path, Last_Index from Database_Entry;
+--# pre Is_Valid (Database_Entry);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Get_Shell") " procedure retrieves
+      the shell field from the database entry "
+      (item parameter "Database_Entry") ". The user name is returned
+      in " (item parameter "Shell_Path") " and the last index used in "
+      (item parameter "Shell_Path") " is returned in "
+      (item parameter "Last_Index") "."))
+  (subsection
+    (title "Preconditions")
+    (para
+      (item parameter "Database_Entry") "must refer to a "
+      (link "posix_user_db_is_valid" "valid") " database entry.")))

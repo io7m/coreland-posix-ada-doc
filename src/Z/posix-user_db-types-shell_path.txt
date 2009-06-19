@@ -1,0 +1,1 @@
+Shell_Path == {S : String | #S ≤ Max_Path_Length}

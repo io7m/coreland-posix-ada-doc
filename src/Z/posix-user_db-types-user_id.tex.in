@@ -1,0 +1,9 @@
+\begin{zed}
+User\_ID == \{ U : \num | U \geq -1 \}
+\end{zed}
+
+\begin{axdef}
+Unspecified\_User : User\_ID
+\where
+Unspecified\_User = -1
+\end{axdef}

@@ -1,0 +1,61 @@
+(section
+  (title "Types")
+
+  (subsection
+    (title "Database_Entry_t")
+    (para-verbatim ada_type_synopsis
+"type Database_Entry_t is limited private;")
+    (para "The " (item ada_type "Database_Entry_t") " type represents a record
+      retrieved from the user/group database. Fields are accessed via accessor
+      functions defined in the package.")
+    (para-verbatim z_specification (render-noescape "Z/posix-user_db-types-database_entry")))
+
+  (subsection
+    (title "User_ID_t")
+    (para-verbatim ada_type_synopsis
+"type User_ID_t is range -1 .. implementation-defined;")
+    (para "The " (item ada_type "User_ID_t") " type represents a single user.")
+    (para "The range of values representing valid users on the system consists
+      of all integers " (item variable "U") " such that " (item variable "U")
+      " is greater than or equal to " (item constant "0") ".")
+    (para "The value " (item constant "-1") " is reserved to mean that the user
+      is unspecified, in applicable contexts.")
+    (para-verbatim z_specification (render-noescape "Z/posix-user_db-types-user_id")))
+
+  (subsection
+    (title "Group_ID_t")
+    (para-verbatim ada_type_synopsis
+"type Group_ID_t is range -1 .. implementation-defined;")
+    (para "The " (item ada_type "Group_ID_t") " type represents a single group.")
+    (para "The range of values representing valid groups on the system consists
+      of all integers " (item variable "G") " such that " (item variable "G")
+      " is greater than or equal to " (item constant "0") ".")
+    (para "The value " (item constant "-1") " is reserved to mean that the group
+      is unspecified, in applicable contexts.")
+    (para-verbatim z_specification (render-noescape "Z/posix-user_db-types-group_id")))
+
+  (subsection
+    (title "User_Name_t")
+    (para-verbatim ada_type_synopsis
+"subtype User_Name_Index_t is Positive range 1 .. implementation-defined;
+subtype User_Name_t is String (User_Name_Index_t);")
+    (para "The " (item ada_type "User_Name") " type represents the name of a user.")
+    (para-verbatim z_specification (render-noescape "Z/posix-user_db-types-user_name")))
+
+  (subsection
+    (title "Home_Directory_t")
+    (para-verbatim ada_type_synopsis
+"subtype Home_Directory_Index_t is Positive range 1 .. Path.Max_Length;
+subtype Home_Directory_t is String (Home_Directory_Index_t);")
+    (para "The " (item ada_type "Home_Directory") " type represents the path to a home directory.")
+    (para-verbatim z_specification (render-noescape "Z/posix-user_db-types-home_directory")))
+
+  (subsection
+    (title "Shell_Path_t")
+    (para-verbatim ada_type_synopsis
+"subtype Shell_Path_Index_t is Positive range 1 .. Path.Max_Length;
+subtype Shell_Path_t is String (Shell_Path_Index_t);")
+    (para "The " (item ada_type "Shell_Path") " type represents the path to a shell.")
+    (para-verbatim z_specification (render-noescape "Z/posix-user_db-types-shell_path")))
+
+) ; end of section

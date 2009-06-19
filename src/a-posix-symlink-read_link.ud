@@ -21,4 +21,8 @@ procedure Read_Link
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Read_Link") " procedure.")))
+      "The " (item ada_procedure "Read_Link") " procedure reads the
+      symbolic link " (item parameter "File_Name") ", placing the
+      contents of the link into " (item parameter "Buffer") ". The
+      number of elements of the buffer used to store the contents
+      is returned in " (item parameter "Buffer_Size") ".")))

@@ -1,0 +1,3 @@
+\begin{zed}
+Home\_Directory == \{ H : String | \# H \leq Path\_Max\_Length \}
+\end{zed}

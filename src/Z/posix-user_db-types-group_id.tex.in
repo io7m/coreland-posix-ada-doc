@@ -1,0 +1,9 @@
+\begin{zed}
+Group\_ID == \{ G : \num | G \geq -1 \}
+\end{zed}
+
+\begin{axdef}
+Unspecified\_Group : Group\_ID
+\where
+Unspecified\_Group = -1
+\end{axdef}

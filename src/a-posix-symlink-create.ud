@@ -19,5 +19,6 @@ procedure Create
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Create") " procedure.")))
-
+      "The " (item ada_procedure "Create") " procedure creates a symbolic
+      link named " (item parameter "File_Name") " with the target "
+      (item parameter "Target") ".")))

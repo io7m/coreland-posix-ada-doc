@@ -8,7 +8,8 @@
     (para "The " (item ada_type "Status_t") " type represents a set of
       metadata for a given file. The type is entirely private and the
       contents may only be accessed via a set of functions defined in
-      the " (item ada_package "File_Status") " package."))
+      the " (item ada_package "File_Status") " package.")
+    (para-verbatim z_specification (render-noescape "Z/posix-file_status-types-status")))
 
   (subsection
     (title "Device_ID_t")

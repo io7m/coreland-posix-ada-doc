@@ -1,6 +1,6 @@
 (section
-  (ref "posix_user_db_get_entry_by_name")
-  (title "POSIX.User_DB.Get_Entry_By_Name")
+  (ref "posix_user_db_get_entry_by_user_id")
+  (title "POSIX.User_DB.Get_Entry_By_User_ID")
   (para procedure_desc "Retrieve entry from user database by name.")
   (subsection
     (title "Synopsis")
@@ -8,22 +8,22 @@
 "with POSIX.Errno;
 with POSIX.Error;
 
-procedure Get_Entry_By_Name
-    (User_Name      : in     String;
+procedure Get_Entry_By_User_ID
+    (User_ID        : in     User_ID_t;
      Database_Entry :    out Database_Entry_t;
      Found_Entry    :    out Boolean;
      Error_Value    :    out Error.Error_t);
 --# global in Errno.Errno_Value;
---# derives Database_Entry, Found_Entry from User_Name &
---#         Error_Value                 from User_Name, Errno.Errno_Value;
+--# derives Database_Entry, Found_Entry from User_ID &
+--#         Error_Value                 from User_ID, Errno.Errno_Value;
 --# post ((Error_Value = Error.Error_None)  and (Is_Valid (Database_Entry))) or
 --#      ((Error_Value /= Error.Error_None) and (not Is_Valid (Database_Entry)));
 "))
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Get_Entry_By_Name") " procedure retrieves
-      the database entry for the user " (item parameter "User_Name") "."))
+      "The " (item ada_procedure "Get_Entry_By_User_ID") " procedure retrieves
+      the database entry for the user " (item parameter "User_ID") "."))
   (subsection
     (title "Postconditions")
     (para

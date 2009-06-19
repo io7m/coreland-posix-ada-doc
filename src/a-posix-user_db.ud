@@ -4,6 +4,16 @@
 
   (contents)
 
+  (include "a-posix-user_db-types.ud")
+
   (include "a-posix-user_db-get_entry_by_name.ud")
+  (include "a-posix-user_db-get_entry_by_user_id.ud")
+  (include "a-posix-user_db-get_user_id.ud")
+  (include "a-posix-user_db-get_group_id.ud")
+  (include "a-posix-user_db-get_user_name.ud")
+  (include "a-posix-user_db-get_home_directory.ud")
+  (include "a-posix-user_db-get_shell.ud")
+
+  (include "a-posix-user_db-is_valid.ud")
 
 ) ; end of section

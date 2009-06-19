@@ -1,0 +1,5 @@
+Group_ID == {G : ℤ | G ≥ −1}
+
+| Unspecified_Group : Group_ID
+|-------
+| Unspecified_Group = -1

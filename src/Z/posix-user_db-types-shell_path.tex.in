@@ -1,0 +1,3 @@
+\begin{zed}
+Shell\_Path == \{ S : String | \# S \leq Path\_Max\_Length \}
+\end{zed}

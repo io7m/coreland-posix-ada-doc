@@ -1,0 +1,5 @@
+User_ID == {U : ℤ | U ≥ −1}
+
+| Unspecified_User : User_ID
+|-------
+| Unspecified_User = -1

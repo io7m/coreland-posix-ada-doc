@@ -1,0 +1,21 @@
+(section
+  (ref "posix_user_db_get_group_id")
+  (title "POSIX.User_DB.Get_Group_ID")
+  (para function_desc "Retrieve group ID from database entry.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"function Get_Group_ID (Database_Entry : in Database_Entry_t) return Group_ID_t;
+--# pre Is_Valid (Database_Entry);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Get_Group_ID") " function retrieves
+      the group ID field from the database entry "
+      (item parameter "Database_Entry") "."))
+  (subsection
+    (title "Preconditions")
+    (para
+      (item parameter "Database_Entry") "must refer to a "
+      (link "posix_user_db_is_valid" "valid") " database entry.")))
