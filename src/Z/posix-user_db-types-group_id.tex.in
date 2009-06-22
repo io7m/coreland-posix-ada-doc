@@ -1,9 +1,13 @@
 \begin{zed}
-Group\_ID == \{ G : \num | G \geq -1 \}
+Group\_IDs == \{ G : \num | G \geq -1 \}
 \end{zed}
 
 \begin{axdef}
-Unspecified\_Group : Group\_ID
+Unspecified\_Group : Group\_IDs
 \where
 Unspecified\_Group = -1
 \end{axdef}
+
+\begin{zed}
+Valid\_Group\_IDs == \{ G : Group\_IDs | G > Unspecified\_Group \}
+\end{zed}

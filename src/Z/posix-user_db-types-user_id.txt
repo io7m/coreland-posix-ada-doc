@@ -1,5 +1,7 @@
-User_ID == {U : ℤ | U ≥ −1}
+User_IDs == {U : ℤ}
 
-| Unspecified_User : User_ID
+| Unspecified_User : User_IDs
 |-------
 | Unspecified_User = -1
+
+Valid_User_IDs == {U : User_IDs | U > Unspecified_User}

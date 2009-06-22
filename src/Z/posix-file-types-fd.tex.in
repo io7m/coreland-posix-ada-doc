@@ -1,3 +1,13 @@
 \begin{zed}
 File\_Descriptors == \{ F : \num | F \geq -1 \}
 \end{zed}
+
+\begin{axdef}
+Invalid\_File\_Descriptor : File\_Descriptors
+\where
+Invalid\_File\_Descriptor = -1
+\end{axdef}
+
+\begin{zed}
+Valid\_File\_Descriptors == \{ F : File\_Descriptors | F > Invalid\_File\_Descriptor \}
+\end{zed}

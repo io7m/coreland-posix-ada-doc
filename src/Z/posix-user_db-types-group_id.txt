@@ -1,5 +1,7 @@
-Group_ID == {G : ℤ | G ≥ −1}
+Group_IDs == {G : ℤ}
 
-| Unspecified_Group : Group_ID
+| Unspecified_Group : Group_IDs
 |-------
 | Unspecified_Group = -1
+
+Valid_Group_IDs == {G : Group_IDs | G > Unspecified_Group}

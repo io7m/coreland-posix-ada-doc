@@ -1,1 +1,7 @@
 File_Descriptors == {F : ℤ | F ≥ −1}
+
+| Invalid_File_Descriptor : File_Descriptors
+|-------
+| Invalid_File_Descriptor = -1
+
+Valid_File_Descriptors == {F : File_Descriptors | F > Invalid_File_Descriptor}

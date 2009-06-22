@@ -4,25 +4,17 @@
   (subsection
     (title "Descriptor_t")
     (para-verbatim ada_type_synopsis
-"type Descriptor_t is range -1 .. implementation-defined;")
+"type Descriptor_t is range -1 .. implementation-defined;
+subtype Valid_Descriptor_t is Descriptor_t range 0 .. Descriptor_t'Last;")
     (para "The " (item ada_type "Descriptor_t") " type represents a file descriptor.
       In a POSIX system, a file descriptor may reference an on-disk file, a
       network socket, a named pipe or a hardware device of some description.")
     (para "The range of values representing file descriptors consists
       of all integers " (item variable "F") " such that " (item variable "F")
       " is greater than or equal to " (item constant "-1") ".")
-    (para-verbatim z_specification (render-noescape "Z/posix-file-types-fd"))
     (para "The value " (item constant "-1") " represents an invalid file
-      descriptor."))
-
-  (subsection
-    (title "Valid_Descriptor_t")
-    (para-verbatim ada_type_synopsis
-"subtype Valid_Descriptor_t is Descriptor_t range 0 .. Descriptor_t'Last;")
-    (para "The range of values representing valid file descriptors consists
-      of all integers " (item variable "V") " such that " (item variable "V")
-      " is greater than or equal to " (item constant "0") ".")
-    (para-verbatim z_specification (render-noescape "Z/posix-file-types-valid_fd")))
+      descriptor.")
+    (para-verbatim z_specification (render-noescape "Z/posix-file-types-fd")))
 
   (subsection
     (title "File_Name_t")

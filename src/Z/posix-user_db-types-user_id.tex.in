@@ -1,9 +1,13 @@
 \begin{zed}
-User\_ID == \{ U : \num | U \geq -1 \}
+User\_IDs == \{ U : \num \}
 \end{zed}
 
 \begin{axdef}
-Unspecified\_User : User\_ID
+Unspecified\_User : User\_IDs
 \where
 Unspecified\_User = -1
 \end{axdef}
+
+\begin{zed}
+Valid\_User\_IDs == \{ U : User\_IDs | U > Unspecified\_User \}
+\end{zed}

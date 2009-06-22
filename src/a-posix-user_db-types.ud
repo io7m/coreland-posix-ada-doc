@@ -13,7 +13,8 @@
   (subsection
     (title "User_ID_t")
     (para-verbatim ada_type_synopsis
-"type User_ID_t is range -1 .. implementation-defined;")
+"type User_ID_t is range -1 .. implementation-defined;
+subtype Valid_User_ID_t is range 0 .. User_ID_t'Last;")
     (para "The " (item ada_type "User_ID_t") " type represents a single user.")
     (para "The range of values representing valid users on the system consists
       of all integers " (item variable "U") " such that " (item variable "U")
@@ -25,7 +26,8 @@
   (subsection
     (title "Group_ID_t")
     (para-verbatim ada_type_synopsis
-"type Group_ID_t is range -1 .. implementation-defined;")
+"type Group_ID_t is range -1 .. implementation-defined;
+subtype Valid_Group_ID_t is range 0 .. Group_ID_t'Last;")
     (para "The " (item ada_type "Group_ID_t") " type represents a single group.")
     (para "The range of values representing valid groups on the system consists
       of all integers " (item variable "G") " such that " (item variable "G")
