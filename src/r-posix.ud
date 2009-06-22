@@ -6,5 +6,6 @@
   (include "r-posix-file.ud")
   (include "r-posix-file_status.ud")
   (include "r-posix-io.ud")
+  (include "r-posix-user_db.ud")
 
 ) ; end of section
