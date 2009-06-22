@@ -1,0 +1,16 @@
+(section
+  (ref "posix_process_info_get_group_id")
+  (title "POSIX.Process_Info.Get_Group_ID")
+  (para function_desc "Get group ID of current process.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with POSIX.User_DB;
+
+function Get_Group_ID return User_DB.Valid_Group_ID_t;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Get_Group_ID") " function returns
+      the group ID of the current process.")))

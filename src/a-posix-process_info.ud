@@ -1,0 +1,19 @@
+(section
+  (ref "posix_process_info")
+  (title "POSIX.Process_Info")
+
+  (contents)
+
+  (include "a-posix-process_info-get_user_id.ud")
+  (include "a-posix-process_info-set_user_id.ud")
+
+  (include "a-posix-process_info-get_effective_user_id.ud")
+  (include "a-posix-process_info-set_effective_user_id.ud")
+
+  (include "a-posix-process_info-get_group_id.ud")
+  (include "a-posix-process_info-set_group_id.ud")
+
+  (include "a-posix-process_info-get_effective_group_id.ud")
+  (include "a-posix-process_info-set_effective_group_id.ud")
+
+) ; end of section

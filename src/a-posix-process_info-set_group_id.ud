@@ -1,0 +1,20 @@
+(section
+  (ref "posix_process_info_set_group_id")
+  (title "POSIX.Process_Info.Set_Group_ID")
+  (para procedure_desc "Set group ID of current process.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.User_DB;
+
+procedure Set_Group_ID
+  (Group_ID    : in     User_DB.Valid_Group_ID_t;
+   Error_Value :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Group_ID, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Set_Group_ID") " procedure sets
+      the group ID of the current process.")))

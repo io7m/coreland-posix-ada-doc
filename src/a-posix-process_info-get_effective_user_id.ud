@@ -1,0 +1,16 @@
+(section
+  (ref "posix_process_info_get_effective_user_id")
+  (title "POSIX.Process_Info.Get_Effective_User_ID")
+  (para function_desc "Get user ID of current process.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with POSIX.User_DB;
+
+function Get_Effective_User_ID return User_DB.Valid_User_ID_t;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Get_Effective_User_ID") " function returns
+      the user ID of the current process.")))
