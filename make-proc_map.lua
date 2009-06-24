@@ -60,7 +60,7 @@ while true do
   spec_line = spec_line:gsub ("^[%s]*", "")
 
   if not expecting_name then
-    local spec_match = spec_line:match ("^-- proc_map : ([a-zA-Z0-9_]+)$")
+    local spec_match = spec_line:match ("^-- subprogram_map : ([a-zA-Z0-9_]+)$")
     if spec_match then
       expecting_name   = true
       orig_name        = spec_match
