@@ -1,0 +1,23 @@
+(section
+  (ref "posix_directory_change_by_descriptor")
+  (title "POSIX.File.Change_By_Descriptor")
+  (para procedure_desc "Change current working directory by file descriptor.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+
+procedure Change_By_Descriptor
+  (Descriptor  : in     File.Valid_Descriptor_t;
+   Error_Value :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Descriptor, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Change_By_Descriptor") " procedure changes
+      the current working directory to the directory referenced by "
+      (item parameter "Descriptor") ".")))

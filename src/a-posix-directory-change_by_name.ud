@@ -1,0 +1,21 @@
+(section
+  (ref "posix_directory_change_by_name")
+  (title "POSIX.File.Change_By_Name")
+  (para procedure_desc "Change current working directory by name.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+
+procedure Change_By_Name
+  (Path        : in     String;
+   Error_Value :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Path, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Change_By_Name") " procedure changes
+      the current working directory to " (item parameter "Path") ".")))

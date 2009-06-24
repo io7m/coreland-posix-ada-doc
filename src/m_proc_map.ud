@@ -1,8 +1,10 @@
 (table procedure_map
   (t-row (item "POSIX API") (item "Ada equivalent"))
+(t-row (item "chdir")(item (link "posix_directory_change_by_name" "POSIX.Directory.Change_By_Name")))
 (t-row (item "chmod")(item (link "posix_file_change_mode" "POSIX.File.Change_Mode")))
 (t-row (item "chown")(item (link "posix_file_change_ownership" "POSIX.File.Change_Ownership")))
 (t-row (item "close")(item (link "posix_file_close" "POSIX.File.Close")))
+(t-row (item "fchdir")(item (link "posix_directory_change_by_descriptor" "POSIX.Directory.Change_By_Descriptor")))
 (t-row (item "fchmod")(item (link "posix_file_change_descriptor_mode" "POSIX.File.Change_Descriptor_Mode")))
 (t-row (item "fchown")(item (link "posix_file_change_descriptor_ownership" "POSIX.File.Change_Descriptor_Ownership")))
 (t-row (item "fstat")(item (link "posix_file_status_get_descriptor_status" "POSIX.File_Status.Get_Descriptor_Status")))

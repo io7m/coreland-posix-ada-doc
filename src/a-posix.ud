@@ -11,6 +11,7 @@
 
   (include "a-posix-types.ud")
 
+  (include "a-posix-directory.ud")
   (include "a-posix-file.ud")
   (include "a-posix-file_status.ud")
   (include "a-posix-io.ud")
