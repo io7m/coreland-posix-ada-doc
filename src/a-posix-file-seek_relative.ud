@@ -1,0 +1,24 @@
+(section
+  (ref "posix_file_seek_relative")
+  (title "POSIX.File.Seek_Relative")
+  (para procedure_desc "Seek to relative offset in file.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+
+procedure Seek_Relative
+  (Descriptor  : in     Valid_Descriptor_t;
+   Offset      : in     Offset_t;
+   Error_Value :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Descriptor, Offset, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Seek_Relative") " procedure seeks
+      to the current position plus " (item parameter "Offset") " in the file
+      referenced by " (item parameter "Descriptor") ".")))

@@ -1,0 +1,24 @@
+(section
+  (ref "posix_file_seek_absolute")
+  (title "POSIX.File.Seek_Absolute")
+  (para procedure_desc "Seek to absolute offset in file.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.File;
+
+procedure Seek_Absolute
+  (Descriptor  : in     Valid_Descriptor_t;
+   Offset      : in     Offset_t;
+   Error_Value :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Descriptor, Offset, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Seek_Absolute") " procedure seeks
+      to the absolute position " (item parameter "Offset") " in the file
+      referenced by " (item parameter "Descriptor") ".")))

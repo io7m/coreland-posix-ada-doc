@@ -62,9 +62,10 @@ type Open_Options_t is array (Open_Option_t) of Boolean;")
   (subsection
     (title "Offset_t")
     (para-verbatim ada_type_synopsis
-"type Offset_t is mod 2 ** implementation-defined;")
+"type Offset_t is range -implementation-defined .. implementation-defined;")
     (para "The " (item ada_type "Offset_t") " type represents an offset in an
-      on-disk file.")
+      on-disk file. It is a signed integer type, capable of representing negative
+      file offsets.")
     (para-verbatim z_specification (render-noescape "Z/posix-file-types-offset")))
 
 ) ; end of section

@@ -1,1 +1,1 @@
-Offset == { O : ℕ }
+Offset == { O : ℤ }
