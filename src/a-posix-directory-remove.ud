@@ -1,0 +1,22 @@
+(section
+  (ref "posix_directory_remove")
+  (title "POSIX.File.Remove")
+  (para procedure_desc "Remove directory.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with POSIX.Errno;
+with POSIX.Error;
+with POSIX.Permissions;
+
+procedure Remove
+  (Name        : in     String;
+   Error_Value :    out Error.Error_t);
+--# global in Errno.Errno_Value;
+--# derives Error_Value from Name, Errno.Errno_Value;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Remove") " procedure removes the
+      empty directory " (item parameter "Name") ".")))
