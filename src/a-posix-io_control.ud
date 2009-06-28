@@ -1,0 +1,16 @@
+(section
+  (ref "posix_io_control")
+  (title "POSIX.IO_Control")
+
+  (contents)
+
+  (include "a-posix-io_control-push_module.ud")
+  (include "a-posix-io_control-pop_module.ud")
+  (include "a-posix-io_control-find_module.ud")
+  (include "a-posix-io_control-look_module.ud")
+  (include "a-posix-io_control-flush.ud")
+  (include "a-posix-io_control-flush_band.ud")
+  (include "a-posix-io_control-set_signal_events.ud")
+  (include "a-posix-io_control-get_signal_events.ud")
+
+) ; end of section

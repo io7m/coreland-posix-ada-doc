@@ -3,9 +3,24 @@
   (title "Binding Design and Rationale")
   (contents)
 
+  (section
+    (title "Design/Implementation")
+    (para "In order to ensure program correctness, a moderate portion of
+      the bindings are generated. The actual values of POSIX
+      constants "
+        (footnote
+          (item "Which are left mostly unspecified in the actual
+            IEEE Std 1003.1™-2008 " (footnote
+            (link-ext "http://www.opengroup.org/onlinepubs/9699919799/"))
+            " documents."))
+      " are detected at library compile-time by a collection of small C
+      programs in order to guarantee portability."))
+
+  (include "r-posix-error.ud")
   (include "r-posix-file.ud")
   (include "r-posix-file_status.ud")
   (include "r-posix-io.ud")
+  (include "r-posix-io_control.ud")
   (include "r-posix-user_db.ud")
 
 ) ; end of section

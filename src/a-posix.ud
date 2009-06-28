@@ -10,11 +10,14 @@
     (include "m_proc_map.ud"))
 
   (include "a-posix-types.ud")
+  (include "a-posix-conventions.ud")
 
   (include "a-posix-directory.ud")
+  (include "a-posix-error.ud")
   (include "a-posix-file.ud")
   (include "a-posix-file_status.ud")
   (include "a-posix-io.ud")
+  (include "a-posix-io_control.ud")
   (include "a-posix-path.ud")
   (include "a-posix-process_info.ud")
   (include "a-posix-symlink.ud")

@@ -1,0 +1,18 @@
+(section
+  (ref "posix_conventions")
+  (title "API conventions")
+
+  (para "All subprograms in the API packages return values of type "
+    (link "posix_error_types_error_t" "POSIX.Error.Error_t") ". On
+    success, a value of " (item constant "Error_None") " is returned.
+    On failure, a value other than " (item constant "Error_None") " is
+    returned. The return value should be checked in a "
+    (item ada_keyword "case") " statement in order for the Ada compiler
+    to guarantee all error conditions have been handled.")
+
+  (para "Subprograms do not raise exceptions. This is to allow the
+    bindings to be used in "
+    (link-ext "http://www.praxis-his.com/sparkada/" "SPARK Ada")
+    " applications.")
+
+) ; end of section

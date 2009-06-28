@@ -18,6 +18,7 @@
   (include "a-posix-file-change_descriptor_mode.ud")
   (include "a-posix-file-change_ownership.ud")
   (include "a-posix-file-change_descriptor_ownership.ud")
+  (include "a-posix-file-rename.ud")
   (include "a-posix-file-seek_absolute.ud")
   (include "a-posix-file-seek_relative.ud")
   (include "a-posix-file-seek_to_start.ud")

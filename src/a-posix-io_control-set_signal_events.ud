@@ -1,0 +1,4 @@
+(section
+  (ref "posix_io_control_set_signal_events")
+  (title "POSIX.IO_Control.Set_Signal_Events")
+)

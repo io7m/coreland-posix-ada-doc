@@ -1,0 +1,13 @@
+(section
+  (ref "posix_error_types")
+  (title "Types")
+
+  (subsection
+    (ref "posix_error_types_error_t")
+    (title "Error_t")
+    (para-verbatim ada_type_synopsis (render-noescape "a-posix-error-types-error_t.ud"))
+    (para "The " (item ada_type "Error_t") " type represents any one of a
+      number of error conditions that may be triggered by any of the "
+      (link "posix" "POSIX") " subprograms."))
+
+) ; end of section

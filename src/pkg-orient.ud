@@ -5,6 +5,8 @@
     (title "Overview")
 
     (para "This package provides a set of Ada bindings to the
-      IEEE Std 1003.1-2008 (POSIX) specification."))
+      IEEE Std 1003.1™-2008 " (footnote
+        (link-ext "http://www.opengroup.org/onlinepubs/9699919799/"))
+      " (POSIX) specification."))
 
 ) ; end of section

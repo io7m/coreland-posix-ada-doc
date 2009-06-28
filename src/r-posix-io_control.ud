@@ -1,0 +1,19 @@
+(section
+  (ref "rd_posix_io_control")
+  (title "POSIX.IO_Control")
+
+  (contents)
+
+  (section
+    (title "Subprograms")
+    (subsection
+      (title "Design/Implementation")
+      (para "The subprograms in the " (item ada_package "IO_Control")
+        " package have a 1:1 relationship with the original command
+        request constants defined for " (item function "ioctl") " "
+        (footnote (link-ext "http://www.opengroup.org/onlinepubs/9699919799/functions/ioctl.html"))
+        ". The original function is a varargs function and therefore
+        cannot be represented in Ada directly without creating a new
+        subprogram for each case.")))
+
+) ; end of section

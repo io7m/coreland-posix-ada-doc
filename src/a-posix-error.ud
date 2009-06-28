@@ -1,0 +1,9 @@
+(section
+  (ref "posix_error")
+  (title "POSIX.Error")
+
+  (contents)
+
+  (include "a-posix-error-types.ud")
+
+) ; end of section

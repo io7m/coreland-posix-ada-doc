@@ -14,6 +14,24 @@ info()
 }
 
 #
+# Error type definition.
+#
+
+info "building error type"
+
+error_values=`awk -F: '{print $NF}' < ${SOURCE}/errno_to_ada.map`
+printf 'type Error_t is\n'   >> src/a-posix-error-types-error_t.ud.tmp || exit 1
+printf '  (Error_None,\n'    >> src/a-posix-error-types-error_t.ud.tmp || exit 1
+for value in ${error_values}
+do
+  echo "   Error_${value},"  >> src/a-posix-error-types-error_t.ud.tmp || exit 1
+done
+printf ");\n"                >> src/a-posix-error-types-error_t.ud.tmp || exit 1
+
+mv src/a-posix-error-types-error_t.ud.tmp \
+   src/a-posix-error-types-error_t.ud || exit 1
+
+#
 # Make procedure map
 #
 

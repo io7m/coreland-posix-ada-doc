@@ -1,0 +1,31 @@
+(section
+  (ref "rd_posix_error")
+  (title "POSIX.Error")
+
+  (contents)
+
+  (section
+    (title "Error_t")
+    (subsection
+      (title "Rationale")
+      (para "The " (item ada_type "Error_t") " type is used to represent error
+        conditions. It is implemented as an enumeration type so a value of the
+        type can be checked in a " (item ada_keyword "case") " statement when
+        returned from a subprogram. This ensures case exhaustiveness; all error
+        conditions must be explicitly handled - this is the single biggest
+        advantage over the original (dangerous) specification of "
+        (item variable "errno") ".")
+      (para "The type also maps \"dangerously similar but not the same across
+        platforms\" " (item variable "errno") " values to single enumeration
+        values. This ensures the portability of code."))
+    (subsection
+      (title "Design/Implementation")
+      (para "The type is generated from an external specification at compile
+        time. A pair of functions are generate to create a two-way mapping
+        between UNIX " (item variable "errno") " values and values of the "
+        (item ada_type "Error_t") " type.")
+      (para "The integer values of the various " (item variable "errno")
+        " constants are detected at compile time to match the system
+        environment exactly.")))
+
+) ; end of section

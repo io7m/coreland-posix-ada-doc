@@ -4,6 +4,8 @@
 
   (contents)
 
+  (include "a-posix-directory-create.ud")
+  (include "a-posix-directory-remove.ud")
   (include "a-posix-directory-change_by_name.ud")
   (include "a-posix-directory-change_by_descriptor.ud")
 
