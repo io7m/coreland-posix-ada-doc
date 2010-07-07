@@ -8,6 +8,7 @@
 (t-row (item "fchmod")(item (link "posix_file_change_descriptor_mode" "POSIX.File.Change_Descriptor_Mode")))
 (t-row (item "fchown")(item (link "posix_file_change_descriptor_ownership" "POSIX.File.Change_Descriptor_Ownership")))
 (t-row (item "fstat")(item (link "posix_file_status_get_descriptor_status" "POSIX.File_Status.Get_Descriptor_Status")))
+(t-row (item "getcwd")(item (link "posix_directory_get_current" "POSIX.Directory.Get_Current")))
 (t-row (item "getegid")(item (link "posix_process_info_get_effective_group_id" "POSIX.Process_Info.Get_Effective_Group_ID")))
 (t-row (item "geteuid")(item (link "posix_process_info_get_effective_user_id" "POSIX.Process_Info.Get_Effective_User_ID")))
 (t-row (item "getgid")(item (link "posix_process_info_get_group_id" "POSIX.Process_Info.Get_Group_ID")))

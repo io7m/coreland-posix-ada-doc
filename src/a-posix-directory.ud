@@ -8,5 +8,6 @@
   (include "a-posix-directory-remove.ud")
   (include "a-posix-directory-change_by_name.ud")
   (include "a-posix-directory-change_by_descriptor.ud")
+  (include "a-posix-directory-get_current.ud")
 
 ) ; end of section
